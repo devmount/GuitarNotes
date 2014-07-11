@@ -3,7 +3,7 @@
 /**
  * moziloCMS Plugin: GuitarNotes
  *
- * Does something awesome!
+ * The GuitarNotes Plugin is a tool for displaying guitar notes and tabs in moziloCMS
  *
  * PHP version 5
  *
@@ -50,7 +50,7 @@ class GuitarNotes extends Plugin
     const PLUGIN_VERSION = 'v0.x.jjjj-mm-dd';
     const MOZILO_VERSION = '2.0';
     private $_plugin_tags = array(
-        'tag1' => '{GuitarNotes|type|<param1>|<param2>}',
+        'tag1' => '{GuitarNotes|type|<syntax>}',
     );
 
     const LOGO_URL = 'http://media.devmount.de/logo_pluginconf.png';
@@ -131,8 +131,10 @@ class GuitarNotes extends Plugin
         $label = $this->_cms_lang->getLanguageValue('label');
 
         // get params
-        list($param_, $param_, $param_)
+        list($param_type, $param_syntax)
             = $this->makeUserParaArray($value, false, '|');
+        $param_syntax = str_replace('-html_nbsp~', ' ', $param_syntax);
+        $param_syntax = str_replace('-html_br~', "\n", $param_syntax); // TODO
 
         // get conf and set default
         $conf = array();
@@ -142,18 +144,18 @@ class GuitarNotes extends Plugin
                 : $this->settings->get($elem);
         }
 
-        // include jquery and GuitarNotes javascript
-        $syntax->insert_jquery_in_head('jquery');
-        $syntax->insert_in_head(
-            '<script type="text/javascript" src="'
-            . $this->PLUGIN_SELF_URL
-            . 'js/GuitarNotes.js"></script>'
-        );
-
         // initialize return content, begin plugin content
         $content = '<!-- BEGIN ' . self::PLUGIN_TITLE . ' plugin content --> ';
 
-        // do something awesome here! ...
+        $lines = explode("\n", trim($param_syntax));
+        var_dump($lines);
+        foreach ($lines as $line) {
+            $notes = explode(' ', trim($line));
+            foreach ($notes as $note) {
+                # code...
+            }
+        }
+
 
         // end plugin content
         $content .= '<!-- END ' . self::PLUGIN_TITLE . ' plugin content --> ';
