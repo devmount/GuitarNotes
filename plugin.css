@@ -1,0 +1,66 @@
+/*
+    PluginDraft CSS styles
+*/
+
+.guitarnotes {
+}
+
+/* NOTICE message */
+.guitarnotes-notice {
+    display: table;
+    margin: 2px 0;
+    border: 1px solid #777;
+    background-color: #eee;
+}
+.guitarnotes-notice div {
+    display: table-cell;
+    padding: 2px 6px;
+    color: white;
+    background-color: #777;
+    height: inherit;
+}
+.guitarnotes-notice span {
+    display: table-cell;
+    padding: 2px 4px;
+    color: #777;
+}
+
+/* SUCCESS message */
+.guitarnotes-success {
+    display: table;
+    margin: 2px 0;
+    border: 1px solid #2a0;
+    background-color: #efe;
+}
+.guitarnotes-success div {
+    display: table-cell;
+    padding: 2px 6px;
+    color: white;
+    background-color: #2a0;
+    height: inherit;
+}
+.guitarnotes-success span {
+    display: table-cell;
+    padding: 2px 4px;
+    color: #2a0;
+}
+
+/* ERROR message */
+.guitarnotes-error {
+    display: table;
+    margin: 2px 0;
+    border: 1px solid #f33;
+    background-color: #fee;
+}
+.guitarnotes-error div {
+    display: table-cell;
+    padding: 2px 6px;
+    color: white;
+    background-color: #f33;
+    height: inherit;
+}
+.guitarnotes-error span {
+    display: table-cell;
+    padding: 2px 4px;
+    color: #f33;
+}
