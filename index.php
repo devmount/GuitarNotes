@@ -147,14 +147,25 @@ class GuitarNotes extends Plugin
         // initialize return content, begin plugin content
         $content = '<!-- BEGIN ' . self::PLUGIN_TITLE . ' plugin content --> ';
 
-        $lines = explode("\n", trim($param_syntax));
-        var_dump($lines);
-        foreach ($lines as $line) {
-            $notes = explode(' ', trim($line));
-            foreach ($notes as $note) {
-                # code...
+        $content .= '<div class="tactset"><span>T A B</span>';
+
+        $tactset = explode("\n\n", trim($param_syntax));
+        foreach ($tactset as $tact) {
+            $noteset = explode(' ', trim($tact));
+            $content .= '<div class="tact">';
+            foreach ($noteset as $notes) {
+                $tones = str_split(substr($notes, 0, strlen($notes)-1));
+                $value = substr($notes, -1);
+                $content .= '<div class="note">';
+                foreach ($tones as $tone) {
+                    $string = intval($tone);
+                    $content .= '<div class="string' . $string . '"></div>';
+                }
+                $content .= '</div>';
             }
+            $content .= '</div>';
         }
+        $content .= '</div><br style="clear:both;" />';
 
 
         // end plugin content

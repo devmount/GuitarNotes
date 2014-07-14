@@ -5,6 +5,73 @@
 .guitarnotes {
 }
 
+.tactset {
+    position: relative;
+    display: inline-block;
+    margin-top:10px;
+    height: 51px;
+    border: 1px solid #aaa;
+    border-left: 6px solid #aaa;
+    border-right: 3px double #aaa;
+}
+.tactset span {
+    position: absolute;
+    display: block;
+    top: 10px;
+    left: 2px;
+    width: 4px;
+    color: #aaa;
+    font-family: Arial;
+    font-size: 9px;
+    line-height: 8pt;
+}
+.tactset .tact {
+    display: inline-block;
+    float: left;
+    padding: 0 11px;
+    height: 49px;
+    border-left: 1px solid #aaa;
+    background: linear-gradient(
+      to bottom,
+      #fff,
+      #fff 90%,
+      #aaa 90%,
+      #aaa
+    );
+    background-size: 100% 10px;
+}
+.note {
+    position: relative;
+    display: inline-block;
+    height: 49px;
+    width: 10px;
+}
+.string1, .string2, .string3, .string4, .string5, .string6 {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #234567;
+}
+.string0 {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #aaa;
+}
+.string0 { top: 22px; }
+.string1 { top: -5px; }
+.string2 { top: 5px; }
+.string3 { top: 15px; }
+.string4 { top: 25px; }
+.string5 { top: 35px; }
+.string6 { top: 45px; }
+
+
 /* NOTICE message */
 .guitarnotes-notice {
     display: table;
