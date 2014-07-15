@@ -158,10 +158,10 @@ class GuitarNotes extends Plugin
                 $value = substr($notes, -1);
                 $content .= '<div class="note">';
                 foreach ($tones as $tone) {
-                    $string = intval($tone);
-                    $content .= '<div class="string' . $string . '"></div>';
+                    $content .= '<div class="string' . intval($tone) . '"></div>';
                 }
                 $content .= '</div>';
+                // $content .= '<div class="notevalue' . $value . '"></div>';
             }
             $content .= '</div>';
         }

@@ -43,6 +43,7 @@
 .note {
     position: relative;
     display: inline-block;
+    margin: 0 1px;
     height: 49px;
     width: 10px;
 }
