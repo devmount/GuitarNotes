@@ -51,17 +51,44 @@
     position: absolute;
     display: inline-block;
     margin: 0;
-    height: 8px;
+    height: 6px;
+    top: 57px;
+}
+/* whole note */
+.value-w {
+    width: 6px;
+    background-color: #aaa;
+    left: 1px;
+}
+/* half note */
+.value-h {
+    width: 6px;
+    background-color: #fff;
+    border: 2px solid #aaa;
+    left: 1px;
+}
+/* quarter note */
+.value-q {
+    width: 6px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    left: 1px;
+}
+/* eigth note */
+.value-e {
     width: 1px;
     background-color: #aaa;
-    top: 55px;
+    left: 4px;
+}
+
+/* sixteenth note */
+.value-s {
+    width: 3px;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    background-color: #fff;
     left: 3px;
 }
-.value-w {} /* whole note */
-.value-h {} /* half note */
-.value-q {} /* quarter note */
-.value-e {} /* eigth note */
-.value-s {} /* sixteenth note */
 
 .string {
     content: "";
