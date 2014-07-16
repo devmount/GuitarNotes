@@ -55,34 +55,34 @@
     top: 57px;
 }
 /* whole note */
-.value-w {
+.notevalue.value-w {
     width: 6px;
     background-color: #aaa;
     left: 1px;
 }
 /* half note */
-.value-h {
+.notevalue.value-h {
     width: 6px;
     background-color: #fff;
     border: 2px solid #aaa;
     left: 1px;
 }
 /* quarter note */
-.value-q {
+.notevalue.value-q {
     width: 6px;
     background-color: #fff;
     border: 1px solid #aaa;
     left: 1px;
 }
-/* eigth note */
-.value-e {
+/* eighth note */
+.notevalue.value-e {
     width: 1px;
     background-color: #aaa;
     left: 4px;
 }
 
 /* sixteenth note */
-.value-s {
+.notevalue.value-s {
     width: 3px;
     border-left: 1px solid #aaa;
     border-right: 1px solid #aaa;
@@ -100,7 +100,7 @@
     border-radius: 50%;
     background: #234567;
 }
-.string0 {
+.string.string0 {
     content: "";
     position: absolute;
     width: 8px;
@@ -110,13 +110,13 @@
     border-radius: 0;
     background: #aaa;
 }
-.string0 { top: 23px; }
-.string1 { top: -5px; }
-.string2 { top: 5px; }
-.string3 { top: 15px; }
-.string4 { top: 25px; }
-.string5 { top: 35px; }
-.string6 { top: 45px; }
+.string.string0 { top: 23px; }
+.string.string1 { top: -5px; }
+.string.string2 { top: 5px; }
+.string.string3 { top: 15px; }
+.string.string4 { top: 25px; }
+.string.string5 { top: 35px; }
+.string.string6 { top: 45px; }
 
 .pluck {
     position: relative;
@@ -136,6 +136,58 @@
     font-family: Courier New, Monospace;
     font-size: 16pt;
     line-height: 16pt;
+}
+
+.legend .tab{
+    position: relative;
+    margin-left: 30px;
+}
+.legend .tab:before{
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    height: 10px;
+    top: 7px;
+}
+/* whole note */
+.legend .tab.value-w:before {
+    content: "";
+    width: 10px;
+    background-color: #aaa;
+    left: -21px;
+}
+/* half note */
+.legend .tab.value-h:before {
+    content: "";
+    width: 10px;
+    background-color: #fff;
+    border: 2px solid #aaa;
+    left: -21px;
+}
+/* quarter note */
+.legend .tab.value-q:before {
+    content: "";
+    width: 10px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    left: -21px;
+}
+/* eighth note */
+.legend .tab.value-e:before {
+    content: "";
+    width: 2px;
+    background-color: #aaa;
+    left: -17px;
+}
+
+/* sixteenth note */
+.legend .tab.value-s:before {
+    content: "";
+    width: 6px;
+    border-left: 2px solid #aaa;
+    border-right: 2px solid #aaa;
+    background-color: #fff;
+    left: -19px;
 }
 
 /* NOTICE message */

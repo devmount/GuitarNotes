@@ -52,6 +52,7 @@ class GuitarNotes extends Plugin
     private $_plugin_tags = array(
         'tag1' => '{GuitarNotes|tab|<syntax>}',
         'tag2' => '{GuitarNotes|pluck|<syntax>}',
+        'tag3' => '{GuitarNotes|legend|<type>}',
     );
 
     const LOGO_URL = 'http://media.devmount.de/logo_pluginconf.png';
@@ -108,6 +109,8 @@ class GuitarNotes extends Plugin
         ),
     );
 
+    private $_note_values = array('w', 'h', 'q', 'e', 's');
+
     /**
      * creates plugin content
      *
@@ -149,6 +152,7 @@ class GuitarNotes extends Plugin
         $content = '<!-- BEGIN ' . self::PLUGIN_TITLE . ' plugin content --> ';
 
         switch ($param_type) {
+            // handle type tab
             case 'tab':
                 $content .= '<div class="tactset"><span>T A B</span>';
 
@@ -174,12 +178,35 @@ class GuitarNotes extends Plugin
                 }
                 $content .= '</div><br style="clear:both;" />';
                 break;
+            // handle type pluck
             case 'pluck':
                 $content .= '<div class="pluck">';
                 $tactset = explode("\n\n", trim($param_syntax));
                 foreach ($tactset as $tact) {
                     $content .= '<div class="tact">' . $tact . '</div>';
                 }
+                $content .= '</div>';
+                break;
+            // handle type legend
+            case 'legend':
+                $content .= '<div class="legend">';
+                switch (trim($param_syntax)) {
+                    case 'tab':
+                        foreach ($this->_note_values as $value) {
+                            $content .= '<div class="tab value-' . $value . '">'
+                                . $this->_cms_lang->getLanguageValue('value-' . $value)
+                                . '</div>';
+                        }
+                        break;
+
+                    case 'pluck':
+                        // $content .= '<div class="pluck "';
+                        break;
+
+                    default:
+                        # code...
+                        break;
+                };
                 $content .= '</div>';
                 break;
 
