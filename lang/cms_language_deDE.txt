@@ -1,2 +1,7 @@
 error     = Fehler
 error_sth = ...
+value-w   = Ganze Note
+value-h   = Halbe Note
+value-q   = Virtel Note
+value-e   = Achtel Note
+value-s   = Sechzehntel Note
