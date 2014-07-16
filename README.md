@@ -16,10 +16,10 @@ Installing a plugin manually requires FTP Access.
 - Go to the backend tab *Plugins* and activate the now listed new GuitarNotes plugin
 
 ## Syntax
-```{GuitarNotes|tab|<param1>}```
+```{GuitarNotes|tab|<syntax>}```
 With type ```tab```, a guitar tab can be inserted via a specific syntax.
 
-1. Parameter ```<param1>```: Short description of parameter 1.
+1. Parameter ```<syntax>```: Short description of parameter 1.
 
 ## License
 This Plugin is distributed under *GNU General Public License, Version 3* (see LICENSE) or, at your choice, any further version.
