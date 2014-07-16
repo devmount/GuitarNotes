@@ -50,7 +50,8 @@ class GuitarNotes extends Plugin
     const PLUGIN_VERSION = 'v0.x.jjjj-mm-dd';
     const MOZILO_VERSION = '2.0';
     private $_plugin_tags = array(
-        'tag1' => '{GuitarNotes|type|<syntax>}',
+        'tag1' => '{GuitarNotes|tab|<syntax>}',
+        'tag2' => '{GuitarNotes|pluck|<syntax>}',
     );
 
     const LOGO_URL = 'http://media.devmount.de/logo_pluginconf.png';
@@ -147,25 +148,45 @@ class GuitarNotes extends Plugin
         // initialize return content, begin plugin content
         $content = '<!-- BEGIN ' . self::PLUGIN_TITLE . ' plugin content --> ';
 
-        $content .= '<div class="tactset"><span>T A B</span>';
+        switch ($param_type) {
+            case 'tab':
+                $content .= '<div class="tactset"><span>T A B</span>';
 
-        $tactset = explode("\n\n", trim($param_syntax));
-        foreach ($tactset as $tact) {
-            $noteset = explode(' ', trim($tact));
-            $content .= '<div class="tact">';
-            foreach ($noteset as $notes) {
-                $tones = str_split(substr($notes, 0, strlen($notes)-1));
-                $value = substr($notes, -1);
-                $content .= '<div class="note">';
-                foreach ($tones as $tone) {
-                    $content .= '<div class="string string' . intval($tone) . '"></div>';
+                $tactset = explode("\n\n", trim($param_syntax));
+                foreach ($tactset as $tact) {
+                    $noteset = explode(' ', trim($tact));
+                    $content .= '<div class="tact">';
+                    foreach ($noteset as $notes) {
+                        $tones = str_split(substr($notes, 0, strlen($notes)-1));
+                        $value = substr($notes, -1);
+                        $content .= '<div class="note">';
+                        foreach ($tones as $tone) {
+                            $content .= '<div class="string string'
+                                . intval($tone)
+                                . '"></div>';
+                        }
+                        $content .= '<div class="notevalue value-'
+                            . $value
+                            . '"></div>';
+                        $content .= '</div>';
+                    }
+                    $content .= '</div>';
                 }
-                $content .= '<div class="notevalue value-' . $value . '"></div>';
+                $content .= '</div><br style="clear:both;" />';
+                break;
+            case 'pluck':
+                $content .= '<div class="pluck">';
+                $tactset = explode("\n\n", trim($param_syntax));
+                foreach ($tactset as $tact) {
+                    $content .= '<div class="tact">' . $tact . '</div>';
+                }
                 $content .= '</div>';
-            }
-            $content .= '</div>';
+                break;
+
+            default:
+                # code...
+                break;
         }
-        $content .= '</div><br style="clear:both;" />';
 
 
         // end plugin content

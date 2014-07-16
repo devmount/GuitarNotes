@@ -91,6 +91,25 @@
 .string5 { top: 35px; }
 .string6 { top: 45px; }
 
+.pluck {
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+    height: 32px;
+    border: 1px solid #aaa;
+    border-left: 6px solid #aaa;
+    border-right: 3px double #aaa;
+}
+.pluck .tact {
+    display: inline-block;
+    float: left;
+    padding: 0 5px;
+    height: 30px;
+    border-left: 1px solid #aaa;
+    font-family: Courier New, Monospace;
+    font-size: 16pt;
+    line-height: 16pt;
+}
 
 /* NOTICE message */
 .guitarnotes-notice {
