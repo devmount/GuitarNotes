@@ -1,7 +1,9 @@
-error     = Fehler
-error_sth = ...
-value-w   = Ganze Note
-value-h   = Halbe Note
-value-q   = Virtel Note
-value-e   = Achtel Note
-value-s   = Sechzehntel Note
+error          = Fehler
+error_sth      = ...
+legend-note    = Saite anschlagen
+legend-pause   = Pause
+legend-value-w = Ganze Note
+legend-value-h = Halbe Note
+legend-value-q = Virtel Note
+legend-value-e = Achtel Note
+legend-value-s = Sechzehntel Note

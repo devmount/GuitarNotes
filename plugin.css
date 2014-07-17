@@ -40,7 +40,7 @@
     );
     background-size: 100% 10px;
 }
-.note {
+.tactset .tact .note {
     position: relative;
     display: inline-block;
     margin: 0 1px;
@@ -148,6 +148,22 @@
     margin: 0;
     height: 10px;
     top: 7px;
+}
+/* general note */
+.legend .tab.note:before {
+    content: "";
+    width: 10px;
+    background-color: #234567;
+    border-radius: 50%;
+    left: -21px;
+}
+/* pause */
+.legend .tab.pause:before {
+    content: "";
+    width: 10px;
+    height: 4px;
+    background-color: #aaa;
+    left: -21px;
 }
 /* whole note */
 .legend .tab.value-w:before {

@@ -1,7 +1,9 @@
-error     = Error
-error_sth = ...
-value-w   = Whole Note
-value-h   = Half Note
-value-q   = Quarter Note
-value-e   = Eighth Note
-value-s   = Sixteenth Note
+error          = Error
+error_sth      = ...
+legend-note    = Pluck String
+legend-pause   = Pause
+legend-value-w = Whole Note
+legend-value-h = Half Note
+legend-value-q = Quarter Note
+legend-value-e = Eighth Note
+legend-value-s = Sixteenth Note

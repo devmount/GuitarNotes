@@ -192,9 +192,17 @@ class GuitarNotes extends Plugin
                 $content .= '<div class="legend">';
                 switch (trim($param_syntax)) {
                     case 'tab':
+                        $content .= '<div class="tab note">'
+                            . $this->_cms_lang->getLanguageValue('legend-note')
+                            . '</div>';
+                        $content .= '<div class="tab pause">'
+                            . $this->_cms_lang->getLanguageValue('legend-pause')
+                            . '</div>';
                         foreach ($this->_note_values as $value) {
                             $content .= '<div class="tab value-' . $value . '">'
-                                . $this->_cms_lang->getLanguageValue('value-' . $value)
+                                . $this->_cms_lang->getLanguageValue(
+                                    'legend-value-' . $value
+                                )
                                 . '</div>';
                         }
                         break;
