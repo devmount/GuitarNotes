@@ -206,6 +206,16 @@
     left: -19px;
 }
 
+.legend .legend-pluck span {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-family: Courier New, Monospace;
+    font-size: 16pt;
+    line-height: 16pt;
+    font-weight: bold;
+}
+
 /* NOTICE message */
 .guitarnotes-notice {
     display: table;

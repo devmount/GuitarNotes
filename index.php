@@ -110,6 +110,12 @@ class GuitarNotes extends Plugin
     );
 
     private $_note_values = array('w', 'h', 'q', 'e', 's');
+    private $_pluck_elements = array(
+        'bass' => '&bull;',
+        'pause' => '&ndash;',
+        'forth' => '&uarr;',
+        'back' => '&darr;'
+    );
 
     /**
      * creates plugin content
@@ -186,7 +192,7 @@ class GuitarNotes extends Plugin
                     $content .= '<div class="tact">';
                     $content .= str_replace(
                         array('.', '-', 'A', 'V'),
-                        array('&bull;', '&ndash;', '&uarr;', '&darr;'),
+                        $this->_pluck_elements,
                         $tact
                     );
                     $content .= '</div>';
@@ -214,7 +220,14 @@ class GuitarNotes extends Plugin
                         break;
 
                     case 'pluck':
-                        // $content .= '<div class="pluck "';
+                        foreach ($this->_pluck_elements as $key => $element) {
+                            $content .= '<div class="legend-pluck element-' . $key . '">'
+                                . '<span>' . $element . '</span>'
+                                . $this->_cms_lang->getLanguageValue(
+                                    'legend-pluck-' . $key
+                                )
+                                . '</div>';
+                        }
                         break;
 
                     default:
