@@ -183,7 +183,13 @@ class GuitarNotes extends Plugin
                 $content .= '<div class="pluck">';
                 $tactset = explode("\n\n", trim($param_syntax));
                 foreach ($tactset as $tact) {
-                    $content .= '<div class="tact">' . $tact . '</div>';
+                    $content .= '<div class="tact">';
+                    $content .= str_replace(
+                        array('.', '-', 'A', 'V'),
+                        array('&bull;', '&ndash;', '&uarr;', '&darr;'),
+                        $tact
+                    );
+                    $content .= '</div>';
                 }
                 $content .= '</div>';
                 break;
