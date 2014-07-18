@@ -221,7 +221,7 @@ class GuitarNotes extends Plugin
 
                     case 'pluck':
                         foreach ($this->_pluck_elements as $key => $element) {
-                            $content .= '<div class="legend-pluck element-' . $key . '">'
+                            $content .= '<div class="legend-pluck">'
                                 . '<span>' . $element . '</span>'
                                 . $this->_cms_lang->getLanguageValue(
                                     'legend-pluck-' . $key

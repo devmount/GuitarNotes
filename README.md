@@ -3,7 +3,7 @@ GuitarNotes
 
 A Plugin for moziloCMS 2.0
 
-GuitarNotes provides various possibilities to display notes, tabs and pluck notation for guitar notation.
+GuitarNotes provides various possibilities to display notes, tabs and pluck notation for guitar.
 
 ## Installation
 #### With moziloCMS installer
