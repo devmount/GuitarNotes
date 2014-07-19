@@ -70,43 +70,43 @@ class GuitarNotes extends Plugin
      *      select   => default, type, descriptions, multiselect
      */
     private $_confdefault = array(
-        'text' => array(
-            'string',
-            'text',
-            '100',
-            '5',
-            "/^[0-9]{1,3}$/",
-        ),
-        'textarea' => array(
-            'string',
-            'textarea',
-            '10',
-            '10',
-            "/^[a-zA-Z0-9]{1,10}$/",
-        ),
-        'password' => array(
-            'string',
-            'password',
-            '100',
-            '5',
-            "/^[a-zA-Z0-9]{8,20}$/",
-            true,
-        ),
-        'check' => array(
-            true,
-            'check',
-        ),
-        'radio' => array(
-            'red',
-            'radio',
-            array('red', 'green', 'blue'),
-        ),
-        'select' => array(
-            'bike',
-            'select',
-            array('car','bike','plane'),
-            false,
-        ),
+        // 'text' => array(
+        //     'string',
+        //     'text',
+        //     '100',
+        //     '5',
+        //     "/^[0-9]{1,3}$/",
+        // ),
+        // 'textarea' => array(
+        //     'string',
+        //     'textarea',
+        //     '10',
+        //     '10',
+        //     "/^[a-zA-Z0-9]{1,10}$/",
+        // ),
+        // 'password' => array(
+        //     'string',
+        //     'password',
+        //     '100',
+        //     '5',
+        //     "/^[a-zA-Z0-9]{8,20}$/",
+        //     true,
+        // ),
+        // 'check' => array(
+        //     true,
+        //     'check',
+        // ),
+        // 'radio' => array(
+        //     'red',
+        //     'radio',
+        //     array('red', 'green', 'blue'),
+        // ),
+        // 'select' => array(
+        //     'bike',
+        //     'select',
+        //     array('car','bike','plane'),
+        //     false,
+        // ),
     );
 
     private $_note_values = array('w', 'h', 'q', 'e', 's');
@@ -345,42 +345,42 @@ class GuitarNotes extends Plugin
         }
 
         // add template CSS
-        $template = '<style>' . $admin_css . '</style>';
+        // $template = '<style>' . $admin_css . '</style>';
 
         // build Template
-        $template .= '
-            <div class="guitarnotes-admin-header">
-            <span>'
-                . $this->_admin_lang->getLanguageValue(
-                    'admin_header',
-                    self::PLUGIN_TITLE
-                )
-            . '</span>
-            <a href="' . self::PLUGIN_DOCU . '" target="_blank">
-            <img style="float:right;" src="' . self::LOGO_URL . '" />
-            </a>
-            </div>
-        </li>
-        <li class="mo-in-ul-li ui-widget-content guitarnotes-admin-li">
-            <div class="guitarnotes-admin-subheader">'
-            . $this->_admin_lang->getLanguageValue('admin_test')
-            . '</div>
-            <div class="guitarnotes-single-conf">
-                {test1_text}
-                {test1_description}
-                <span class="guitarnotes-admin-default">
-                    [' . /*$this->_confdefault['test1'][0] .*/']
-                </span>
-            </div>
-            <div class="guitarnotes-single-conf">
-                {test2_text}
-                {test2_description}
-                <span class="guitarnotes-admin-default">
-                    [' . /*$this->_confdefault['test2'][0] .*/']
-                </span>
-        ';
+        // $template .= '
+        //     <div class="guitarnotes-admin-header">
+        //     <span>'
+        //         . $this->_admin_lang->getLanguageValue(
+        //             'admin_header',
+        //             self::PLUGIN_TITLE
+        //         )
+        //     . '</span>
+        //     <a href="' . self::PLUGIN_DOCU . '" target="_blank">
+        //     <img style="float:right;" src="' . self::LOGO_URL . '" />
+        //     </a>
+        //     </div>
+        // </li>
+        // <li class="mo-in-ul-li ui-widget-content guitarnotes-admin-li">
+        //     <div class="guitarnotes-admin-subheader">'
+        //     . $this->_admin_lang->getLanguageValue('admin_test')
+        //     . '</div>
+        //     <div class="guitarnotes-single-conf">
+        //         {test1_text}
+        //         {test1_description}
+        //         <span class="guitarnotes-admin-default">
+        //             [' . /*$this->_confdefault['test1'][0] .*/']
+        //         </span>
+        //     </div>
+        //     <div class="guitarnotes-single-conf">
+        //         {test2_text}
+        //         {test2_description}
+        //         <span class="guitarnotes-admin-default">
+        //             [' . /*$this->_confdefault['test2'][0] .*/']
+        //         </span>
+        // ';
 
-        $config['--template~~'] = $template;
+        // $config['--template~~'] = $template;
 
         return $config;
     }
@@ -428,8 +428,7 @@ class GuitarNotes extends Plugin
             $this->_admin_lang->getLanguageValue(
                 'description',
                 htmlspecialchars($this->_plugin_tags['tag1']),
-                htmlspecialchars($this->_plugin_tags['tag2']),
-                htmlspecialchars($this->_plugin_tags['tag3'])
+                htmlspecialchars($this->_plugin_tags['tag2'])
             ),
             self::PLUGIN_AUTHOR,
             self::PLUGIN_DOCU,
