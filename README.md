@@ -19,13 +19,31 @@ Installing a plugin manually requires FTP Access.
 ```{GuitarNotes|tab|<syntax>}```
 With type ```tab```, a guitar tab can be inserted via a specific syntax. Notes with their position on the fretboard and their length can be specified.
 
-1. Parameter ```<syntax>```: Notes are at least one number between 1 and 6 or number 0 (pause), directly followed by a letter that specifies the note value (w = whole note, h = half note, q = quarter note, e = eigth note, s = sixteenth note). Notes are seperated by white spaces, tacts are seperated by newlines. The following example syntax shows two tacts with different note variations:
-```{GuitarNotes|tab|
+1. Parameter ```<syntax>```: Notes are at least one number between 1 and 6 (corresponding guitar string) or number 0 (pause), directly followed by a letter that specifies the note value (w = whole note, h = half note, q = quarter note, e = eigth note, s = sixteenth note). Notes are seperated by white spaces, tacts are seperated by newlines. The following example syntax shows four tacts with different note variations:
+```
+{GuitarNotes|tab|
     654w
     42h 1h
     5q 1q 2q 3q
     0q 0e 2e 3e 1e 2e 3s 3s
-}```
+}
+```
+
+```{GuitarNotes|pluck|<syntax>}```
+With type ```pluck```, a guitar pluck diagram can be inserted via a specific syntax.
+
+1. Parameter ```<syntax>```: Four different elements can be inserted (```.``` = Play Bass string, ```-``` = Pluck without touching the strings, ```V``` = Pluck back, ```A``` = Pluck forth), tacts are seperated by newlines, e.g.:
+```
+{GuitarNotes|pluck|
+    .-.-A-AV
+    AV.-AVAV
+}
+```
+
+```{GuitarNotes|legend|<type>}```
+Inserts a legend for each possible type.
+
+1. Parameter ```<type>```: Possible types are ```tab``` and ```pluck```.
 
 ## License
 This Plugin is distributed under *GNU General Public License, Version 3* (see LICENSE) or, at your choice, any further version.
