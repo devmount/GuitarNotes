@@ -41,7 +41,7 @@ With type *pluck*, a guitar pluck diagram can be inserted via a specific syntax.
 ```
 
 #### ```{GuitarNotes|legend|<type>}```
-Inserts a *legend* for each possible type.
+Inserts a *legend* for each existing type.
 
 1. Parameter ```<type>```: Possible types are ```tab``` and ```pluck```.
 
