@@ -17,9 +17,15 @@ Installing a plugin manually requires FTP Access.
 
 ## Syntax
 ```{GuitarNotes|tab|<syntax>}```
-With type ```tab```, a guitar tab can be inserted via a specific syntax.
+With type ```tab```, a guitar tab can be inserted via a specific syntax. Notes with their position on the fretboard and their length can be specified.
 
-1. Parameter ```<syntax>```: Short description of parameter 1.
+1. Parameter ```<syntax>```: Notes are at least one number between 1 and 6 or number 0 (pause), directly followed by a letter that specifies the note value (w = whole note, h = half note, q = quarter note, e = eigth note, s = sixteenth note). Notes are seperated by white spaces, tacts are seperated by newlines. The following example syntax shows two tacts with different note variations:
+```{GuitarNotes|tab|
+    654w
+    42h 1h
+    5q 1q 2q 3q
+    0q 0e 2e 3e 1e 2e 3s 3s
+}```
 
 ## License
 This Plugin is distributed under *GNU General Public License, Version 3* (see LICENSE) or, at your choice, any further version.
