@@ -147,12 +147,12 @@ class GuitarNotes extends Plugin
         $param_syntax = str_replace('-html_br~', "\n", $param_syntax); // TODO
 
         // get conf and set default
-        $conf = array();
-        foreach ($this->_confdefault as $elem => $default) {
-            $conf[$elem] = ($this->settings->get($elem) == '')
-                ? $default[0]
-                : $this->settings->get($elem);
-        }
+        // $conf = array();
+        // foreach ($this->_confdefault as $elem => $default) {
+        //     $conf[$elem] = ($this->settings->get($elem) == '')
+        //         ? $default[0]
+        //         : $this->settings->get($elem);
+        // }
 
         // initialize return content, begin plugin content
         $content = '<!-- BEGIN ' . self::PLUGIN_TITLE . ' plugin content --> ';
