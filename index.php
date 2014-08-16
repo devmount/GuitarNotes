@@ -170,6 +170,7 @@ class GuitarNotes extends Plugin
                     $chord = '';
                     if (strpos($tact, '-') !== FALSE) {
                         list($tact, $chord) = explode('-', $tact);
+                        $chord = trim($chord);
                     }
 
                     $noteset = explode(' ', trim($tact));
