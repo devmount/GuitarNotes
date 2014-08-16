@@ -163,13 +163,29 @@ class GuitarNotes extends Plugin
                 $content .= '<div class="tactset"><span>T A B</span>';
 
                 $tactset = explode("\n\n", trim($param_syntax));
+
+                // tacts
                 foreach ($tactset as $tact) {
+                    // check for given chord
+                    $chord = '';
+                    if (strpos($tact, '-') !== FALSE) {
+                        list($tact, $chord) = explode('-', $tact);
+                    }
+
                     $noteset = explode(' ', trim($tact));
                     $content .= '<div class="tact">';
+
+                    if ($chord != '') {
+                        $content .= '<span class="tchord">' . $chord . '</span>';
+                    }
+
+                    // notes
                     foreach ($noteset as $notes) {
                         $tones = str_split(substr($notes, 0, strlen($notes)-1));
                         $value = substr($notes, -1);
                         $content .= '<div class="note">';
+
+                        // tones
                         foreach ($tones as $tone) {
                             $content .= '<div class="string string'
                                 . intval($tone)
