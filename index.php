@@ -445,8 +445,8 @@ class GuitarNotes extends Plugin
             self::MOZILO_VERSION,
             $this->_admin_lang->getLanguageValue(
                 'description',
-                htmlspecialchars($this->_plugin_tags['tag1']),
-                htmlspecialchars($this->_plugin_tags['tag2'])
+                htmlspecialchars($this->_plugin_tags['tag1'], ENT_COMPAT, 'UTF-8'),
+                htmlspecialchars($this->_plugin_tags['tag2'], ENT_COMPAT, 'UTF-8')
             ),
             self::PLUGIN_AUTHOR,
             array(
