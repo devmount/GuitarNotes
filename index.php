@@ -12,8 +12,7 @@
  * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL v3+
  * @version  GIT: v0.1.2014-07-20
- * @link     https://github.com/devmount-mozilo/GuitarNotes
- * @link     http://devmount.de/Develop/moziloCMS/Plugins/GuitarNotes.html
+ * @link     https://github.com/devmount-mozilo/GuitarNotes/wiki/Dokumentation
  * @see      Your word is a lamp to my feet and a light for my path.
  *           – The Bible
  *
@@ -48,7 +47,7 @@ class GuitarNotes extends Plugin
     const PLUGIN_VERSION = 'v0.1.2014-07-20';
     const MOZILO_VERSION = '2.0';
     const PLUGIN_DOCU
-        = 'http://devmount.de/Develop/moziloCMS/Plugins/GuitarNotes.html';
+        = 'https://github.com/devmount-mozilo/GuitarNotes/wiki/Dokumentation';
 
     private $_plugin_tags = array(
         'tag1' => '{GuitarNotes|tab|<syntax>}',
